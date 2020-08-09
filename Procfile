@@ -1,2 +1,2 @@
-web: gunicorn farmacia_turnos_project.wsgi
+web: gunicorn farmacias_turno_project.wsgi
 release: python manage.py migrate --noinput
