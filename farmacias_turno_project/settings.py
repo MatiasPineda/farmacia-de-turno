@@ -50,7 +50,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'farmacia_turnos_project.urls'
+ROOT_URLCONF = 'farmacias_turno_project.urls'
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8080',  # default vue
+    'http://localhost:8000',  # devault django
+    'http://farmacias-de-turno.herokuapp.com',  # heroku
+)
 
 TEMPLATES = [
     {
@@ -69,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'farmacia_turnos_project.wsgi.application'
+WSGI_APPLICATION = 'farmacias_turno_project.wsgi.application'
 
 DATABASES = {'default': ENV.db()}
 if ENV('CI', default=False):
