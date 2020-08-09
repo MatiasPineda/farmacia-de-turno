@@ -58,6 +58,7 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:8080',  # default vue
     'http://localhost:8000',  # devault django
     'http://farmacias-de-turno.herokuapp.com',  # heroku
+    'https://matiaspineda.github.io/',      # github pages
 )
 
 TEMPLATES = [
