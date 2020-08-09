@@ -42,7 +42,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'projectname.urls'
+ROOT_URLCONF = 'farmacia_turnos_project.urls'
 
 TEMPLATES = [
     {
@@ -61,7 +61,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'projectname.wsgi.application'
+WSGI_APPLICATION = 'farmacia_turnos_project.wsgi.application'
 
 DATABASES = {'default': ENV.db()}
 if ENV('CI', default=False):
