@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:MatiasPineda/MatiasPineda.github.io.git gh-pages
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:MatiasPineda/farmacia-de-turno.git frontend:gh-pages
+git push -f git@github.com:MatiasPineda/farmacia-de-turno.git master:gh-pages
 
 cd -
