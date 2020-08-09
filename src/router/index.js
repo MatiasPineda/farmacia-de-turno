@@ -1,14 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import FarmaciaTurno from '../components/Farmacia/FarmaciaTurno'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      title: 'Home Page - Example App',
+    }
+  },
+  {
+    path: '/',
+    name: 'FarmaciaTurno',
+    component: FarmaciaTurno,
+    meta: {
+      title: 'Farmacias de Turno'
+    }
   },
   {
     path: '/about',
