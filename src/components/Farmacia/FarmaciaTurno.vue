@@ -79,7 +79,7 @@
     },
     methods: {
       getFarmacias () {
-        const path = 'http://localhost:8000/api/v1.0/farmaciasturno/'
+        const path = 'http://farmacias-de-turno.herokuapp.com/api/v1.0/farmaciasturno/'
         axios.get(path).then((response)=>{
           this.farmacias = response.data
         })
@@ -88,7 +88,7 @@
           })
       },
       getRegiones () {
-        const path = 'http://localhost:8000/api/v1.0/localidades'
+        const path = 'http://farmacias-de-turno.herokuapp.com/api/v1.0/localidades'
         axios.get(path).then((response)=>{
           this.regiones = response.data
         })
