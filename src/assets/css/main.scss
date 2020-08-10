@@ -1,0 +1,11 @@
+body{
+  background-color: #4888a3;
+
+  #cont-contenido{
+    height: calc(100vh - 70px);
+    max-height: calc(100vh - 70px);
+    background-color: #f2ece9;
+    overflow-y: scroll;
+  }
+
+}

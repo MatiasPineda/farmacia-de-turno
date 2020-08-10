@@ -1,33 +1,34 @@
 <template>
   <div class="container">
-    <h2>Farmacias de Turno</h2>
     <div class="col-md-12">
       <b-form @submit="onSubmit">
-        <b-form-select v-model="selected.region" @change="resetProvincia">
+        <b-form-select v-model="selected.region" @change="resetProvincia" class="location-select">
           <option value="" disabled>Selecciona Región</option>
           <option v-for="(r, index) in regiones" :value="r" :key="index">{{ r.name }}</option>
         </b-form-select>
 
-        <b-form-select v-model="selected.provincia" :disabled="!selected.region" @change="resetComuna">
+        <b-form-select v-model="selected.provincia" :disabled="!selected.region" @change="resetComuna" class="location-select">
           <option value="" disabled>Selecciona Provincia</option>
           <option v-for="(p, index) in selected.region.provincias" :value="p" :key="index">{{ p.name }}</option>
         </b-form-select>
 
-        <b-form-select v-model="selected.comuna" :disabled="!selected.provincia">
+        <b-form-select v-model="selected.comuna" :disabled="!selected.provincia" class="location-select">
           <option value="" disabled>Selecciona Comuna</option>
           <option v-for="(c, index) in selected.provincia.comunas" :value="c" :key="index">{{ c.name }}</option>
         </b-form-select>
-        <b-button type="submit" variant="primary">Buscar</b-button>
+
+        <b-button type="submit" block variant="success" :disabled="!selected.comuna" class="location-btn">Buscar</b-button>
       </b-form>
     </div>
 
     <div>
-        <div v-if="showInfo == true">
+        <div v-if="showInfo == true" class="cards-group">
           <b-card
              v-for="farm in filteredFarmacias" :key="farm.id"
              :title="farm.nombre"
              :sub-title="'Direccion: ' + farm.direccion"
              :footer="stringHorario(formatDate(farm.apertura), formatDate(farm.cierre))"
+             class="card-container"
           >
             <p class="card-text">
               Contacto: {{farm.telefono}}
@@ -37,7 +38,7 @@
               v-if="farm.lat != null"
               :href="'https://www.google.cl/maps/search/' + farm.lat + ',' + farm.lng"
               target="_blank"
-              variant="outline-primary">
+              variant="outline-success">
               Google Maps
             </b-button>
 
@@ -45,7 +46,7 @@
               v-else
               :href="'https://www.google.cl/maps/search/' + farm.nombre.replace(' ','+')"
               target="_blank"
-              variant="outline-primary">
+              variant="outline-success">
               Google Maps
             </b-button>
 
