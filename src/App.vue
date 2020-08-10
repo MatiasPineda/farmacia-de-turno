@@ -6,6 +6,9 @@
       <div id="cont-view">
         <router-view />
       </div>
+      <div id="footer">
+        Matías Pineda - 2020
+      </div>
     </div>
   </div>
 </template>

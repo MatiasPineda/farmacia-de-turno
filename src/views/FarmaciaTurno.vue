@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="col-md-12">
+  <div class="cont-view">
+    <div>
       <b-form @submit="onSubmit">
         <b-form-select v-model="selected.region" @change="resetProvincia" class="location-select">
           <option value="" disabled>Selecciona Región</option>
@@ -49,7 +49,6 @@
               variant="outline-success">
               Google Maps
             </b-button>
-
           </b-card>
         </div>
     </div>
