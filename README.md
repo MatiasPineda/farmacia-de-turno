@@ -1,5 +1,7 @@
 # Farmacia de turno
 
+(Actualmente frontend desplegado en github pages no permite llamadas a la api de backend desplegada en heroku)
+
 Sitio que entrega las farmacias de turno en la comuna seleccionada.
 
 Se actualiza a las 13hrs de cada día.
